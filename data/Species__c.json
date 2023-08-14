@@ -1,0 +1,18 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Species__c",
+                "referenceId": "Species__cRef1"
+            },
+            "Descripcion__c": "Conocida por sus propiedades medicinales y aplicaciones para la piel",
+            "Ideal_Max_temperature__c": 25,
+            "Image_URL__c": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIoXbr91I1AchlBzvG-BRhImNQD5tbTRfi36_atfAD989CmxdWLF67SWg2yFBZpP68dr4&usqp=CAU",
+            "Loca__c": "Outdoors",
+            "Name": "Aloe Vera",
+            "Pulverization__c": false,
+            "Sowing__c": null,
+            "Type__c": "Ornamental"
+        }
+    ]
+}
