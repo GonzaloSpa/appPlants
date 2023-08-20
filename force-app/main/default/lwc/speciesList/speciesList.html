@@ -1,0 +1,8 @@
+<template>
+    <template for:each={species} for:item="specie">
+        <div key={specie.Id}>
+            {contact.Name}, {contact.Title}
+            <c-species-tag></c-species-tag>
+        </div>
+      </template>
+</template>
