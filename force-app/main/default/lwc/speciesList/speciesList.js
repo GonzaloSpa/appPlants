@@ -1,3 +1,7 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, wire } from 'lwc';
+import getAllSpecies from "@salesforce/apex/SpeciesService.getAllSpecies";
 
-export default class SpeciesList extends LightningElement {}
+export default class SpeciesList extends LightningElement {
+    @wire(getAllSpecies)
+    species;
+}
