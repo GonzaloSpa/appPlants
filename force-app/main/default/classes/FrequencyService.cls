@@ -1,7 +1,31 @@
 public with sharing class FrequencyService {
-    public static Integer getWateringDays(Species__c specie) {
-        return 20;
+
+    static Map<String, Integer> daysByFrequency = new Map<String, Integer>();
+
+    static {
+        daysByFrequency.put('Daily', 1);
+        daysByFrequency.put('Twice per week', 3);
+        daysByFrequency.put('Weekly', 7);
+        daysByFrequency.put('Every other week', 15);
+        daysByFrequency.put('Monthly', 30);
+        daysByFrequency.put('Every three months', 90);
+        daysByFrequency.put('Not needed', 999);
     }
+
+    static Set<Integer> summerMonths = new Set<Integer>{11, 12, 1, 2, 3};
+    
+    public static Integer getWateringDays(Species__c specie) {
+        Integer month = System.today().month();
+        if (summerMonths.contains(month)) {
+           return daysByFrequency.get(specie.Summer_Watering_Frecuency__c);
+        }
+        else {
+            return daysByFrequency.get(specie.Winter_Wetering_Frequency__c);
+        }
+        
+    }   
+       
+    
     public static Integer getFertilizationDays(Species__c specie) {
         return 30;
     }
