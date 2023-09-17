@@ -1,5 +1,5 @@
 public with sharing class SpeciesService {
-     @AuraEnabled(cacheable=true)
+    @AuraEnabled(cacheable=true)
    
     public static List<Species__c> getFilteredSpecies(String searchText) {
         String likeValue = '%' + 'searchText' + '%';

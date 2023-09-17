@@ -3,7 +3,7 @@ import getFilteredSpecies from "@salesforce/apex/SpeciesService.getFilteredSpeci
 
 export default class SpeciesList extends LightningElement {
     // PROPERTIES, GETTERS & SETTERS
-    searchText = ""; 
+    searchText = " "; 
 
     // LIFECYCLE HOOKS
 
